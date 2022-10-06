@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@200;400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/245431f389.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/WalletOrganizer/main.css">
+    <title>WalletOrganizer</title>
+</head>
+
+<body>
+
+    <header>
+        <h1><i class="fas fa-wallet"></i> WalletOrganizer</h1>
+        <p>Your personal wallet organizer</p>
+    </header>
+
+    <main>
+        <section class="transactions">
+
+            <h2 class="title">Transactions list</h2>
+
+            <div class="transaction-list">
+
+
+                <div class="income-area">
+                    <h3>Income:</h3>
+
+                </div>
+                <div class="expenses-area">
+                    <h3>Expenses:</h3>
+          
+                </div>
+            </div>
+        </section>
+
+        <section class="options">
+            <div>
+                <h2 class="title">Available funds:</h2>
+                <p class="aviable-money">0 PLN</p>
+            </div>
+            <div class="controls">
+                <button class="add-transaction"><i class="fas fa-plus"></i>Add transaction</button>
+                <button class="delete-all"><i class="far fa-trash-alt"></i>Clear</button>
+            </div>
+            <div class="style-selection">
+                <h2 class="title">Choose style:</h2>
+                <div class="color-btns">
+                    <button class="light"></button>
+                    <button class="dark"></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="add-transaction-panel">
+        <h2 class="title">Add new transaction</h2>
+
+        <label for="name">Name:</label>
+        <small>(enter transaction name)</small>
+        <input type="text" id="name">
+
+        <label for="amount">Amount:</label>
+        <small>(enter a value)</small>
+        <input type="number" id="amount">
+
+        <label for="category">Choose category:</label>
+        <small>( [+] For Income, [-] for Expenses)</small>
+        <select id="category" onchange="selectCategory()">
+            <option value="none" selected disabled></option>
+            <option value="0"> [+] Salary</option>
+            <option value="1"> [-] Food</option>
+            <option value="2"> [-] Shopping</option>
+            <option value="3"> [-] Pleasures</option>
+            <option value="4"> [-] Bills</option>
+            <option value="5"> [-] Medication</option>
+        </select>
+        <p class="error">Wypełnij wszystkie pola!</p>
+        <div class="panel-btns">
+            <button class="save"><i class="fas fa-check"></i> Save</button>
+            <button class="cancel"><i class="far fa-window-close"></i> Close</button>
+        </div>
+    </div>
+
+
+    <script src="/WalletOrganizer/script.js"></script>
+</body>
+
+</html>
